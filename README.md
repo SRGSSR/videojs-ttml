@@ -29,7 +29,7 @@ Download videojs-ttml and include it in your page along with video.js:
 <script>
 var player = videojs('example-video', { plugins: { ttml: {} }, nativeTextTracks: false }, function() {
     // Print a list of available textracks
-    console.log(this.textracks());
+    console.log(this.textTracks());
 });
 </script>
 ```
