@@ -1,4 +1,4 @@
-/*! videojs-ttml - v0.1.0 - 2016-11-25*/
+/*! videojs-ttml - v0.1.1 - 2016-11-29*/
 (function(window, moment, vjs) {
   'use strict';
 
@@ -46,7 +46,7 @@
       var Player = this.constructor,
           addRemoteTextTrack = Player.prototype.addRemoteTextTrack;
 
-      Player.prototype.addRemoteTextTrack = function(options, manualCleanup) {
+      this.addRemoteTextTrack = function(options, manualCleanup) {
         var parser = new TTMLParser(),
             src = options.src,
             isTTML = options.type && options.type === 'application/ttml+xml',
