@@ -1,6 +1,6 @@
 {
   "name": "videojs-ttml",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TTML TextTrack tech for video.js",
   "license": "Apache-2.0",
   "main": "./dist/videojs-ttml.js",
