@@ -7,10 +7,11 @@
 This plugin makes it possible use TTML text tracks on VideoJS.
 
 - [Getting Started](#getting-started)
+- [Dependencies](#dependencies)
 
 ## Getting Started
 
-Download videojs-ttml and include it in your page along with video.js:
+Download videojs-ttml and include it in your page along with video.js. To use this plugin you must set `nativeTextTracks` to `false`:
 
 ```html
 <video id="example-video" width=600 height=300 class="video-js vjs-default-skin" controls>
@@ -25,6 +26,7 @@ Download videojs-ttml and include it in your page along with video.js:
      type="application/ttml+xml">
 </video>
 <script src="video.js"></script>
+<script src="moment.js"></script>
 <script src="videojs-ttml.js"></script>
 <script>
 var player = videojs('example-video', { plugins: { ttml: {} }, nativeTextTracks: false }, function() {
@@ -33,3 +35,7 @@ var player = videojs('example-video', { plugins: { ttml: {} }, nativeTextTracks:
 });
 </script>
 ```
+
+## Dependencies
+
+This plugin requires [moment.js](https://github.com/moment/moment/).
