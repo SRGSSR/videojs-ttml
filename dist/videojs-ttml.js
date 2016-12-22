@@ -1,4 +1,4 @@
-/*! videojs-ttml - v0.1.1 - 2016-11-29*/
+/*! videojs-ttml - v0.2.0 - 2016-12-22*/
 (function(window, moment, vjs) {
   'use strict';
 
@@ -43,8 +43,10 @@
   };
 
   vjs.plugin('ttml', function(options) {
-      var Player = this.constructor,
-          addRemoteTextTrack = Player.prototype.addRemoteTextTrack;
+      var constructor = this,
+          Player = {
+            addRemoteTextTrack: constructor.addRemoteTextTrack
+          };
 
       this.addRemoteTextTrack = function(options, manualCleanup) {
         var parser = new TTMLParser(),
@@ -54,7 +56,7 @@
 
         options.src = (isTTML) ? undefined : options.src;
 
-        elmt = addRemoteTextTrack.apply(this, arguments);
+        elmt = Player.addRemoteTextTrack.apply(this, arguments);
 
         if (isTTML && elmt && elmt.track) {
           var track = elmt.track;

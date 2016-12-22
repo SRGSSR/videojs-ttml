@@ -1,26 +1,25 @@
 {
   "name": "videojs-ttml",
-  "version": "0.1.1",
-  "description": "TTML TextTrack tech for video.js",
-  "license": "Apache-2.0",
+  "version": "0.2.0",
+  "description": "TTML TextTrack plugin for video.js",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/SRGSSR/videojs-ttml.git"
+  },
   "main": "./dist/videojs-ttml.js",
-  "keywords": [
-    "videojs",
-    "ttml",
-    "texttracks"
-  ],
-  "dependencies": {},
+  "keywords": ["videojs", "videojs-plugin", "ttml", "texttracks"],
+  "author": "SRGSSR",
+  "license": "MIT",
+  "dependencies": {
+    "video.js": "^5.8.5",
+    "moment": "^2.17.0"
+  },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.4",
-    "grunt-contrib-concat": "^0.3",
-    "grunt-contrib-jshint": "^0.6",
-    "grunt-contrib-qunit": "^0.2",
-    "grunt-contrib-uglify": "^0.2",
-    "grunt-contrib-watch": "^0.4",
-    "path": "^0.12.7",
-    "qunitjs": "^1.12",
-    "sinon": "1.10.2",
-    "video.js": "^5.8.5"
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "load-grunt-tasks": "^3.5.2"
   }
 }
