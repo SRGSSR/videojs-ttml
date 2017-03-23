@@ -1,6 +1,6 @@
 {
   "name": "videojs-ttml",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "TTML TextTrack plugin for video.js",
   "repository": {
       "type": "git",
