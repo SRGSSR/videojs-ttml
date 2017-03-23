@@ -1,4 +1,4 @@
-/*! videojs-ttml - v0.2.0 - 2016-12-22*/
+/*! videojs-ttml - v0.2.0 - 2017-03-23*/
 (function(window, moment, vjs) {
   'use strict';
 
@@ -65,11 +65,16 @@
             if (err || response.statusCode >= 300) {
               this.removeRemoteTextTrack(track);
             } else {
-              track.loaded_ = true;
               var cues = parser.parseTTML(responseBody);
-              cues.forEach(function(cue) {
-                elmt.track.addCue(cue);
-              });
+              if (cues.length > 0) {
+                cues.forEach(function(cue) {
+                  elmt.track.addCue(cue);
+                });
+                track.loaded_ = true;
+              } else {
+                vjs.log.warn("Captions is empty or was not in TTML format: " + response.url);
+                this.removeRemoteTextTrack(track);
+              }
             }
           }.bind(this));
         }
