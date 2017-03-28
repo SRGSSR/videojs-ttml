@@ -1,4 +1,4 @@
-/*! videojs-ttml - v0.2.1 - 2017-03-28*/
+/*! videojs-ttml - v0.2.2 - 2017-03-28*/
 (function(window, moment, vjs) {
   'use strict';
 
