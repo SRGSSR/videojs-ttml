@@ -1,4 +1,4 @@
-/*! videojs-ttml - v0.2.1 - 2017-03-23*/
+/*! videojs-ttml - v0.2.2 - 2017-03-28*/
 (function(window, moment, vjs) {
   'use strict';
 
@@ -67,10 +67,10 @@
             } else {
               var cues = parser.parseTTML(responseBody);
               if (cues.length > 0) {
+                track.loaded_ = true;
                 cues.forEach(function(cue) {
                   elmt.track.addCue(cue);
                 });
-                track.loaded_ = true;
               } else {
                 vjs.log.warn("Captions is empty or was not in TTML format: " + response.url);
                 this.removeRemoteTextTrack(track);
