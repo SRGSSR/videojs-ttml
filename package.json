@@ -3,15 +3,20 @@
   "version": "0.2.2",
   "description": "TTML TextTrack plugin for video.js",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/SRGSSR/videojs-ttml.git"
+    "type": "git",
+    "url": "https://github.com/SRGSSR/videojs-ttml.git"
   },
   "main": "./dist/videojs-ttml.js",
-  "keywords": ["videojs", "videojs-plugin", "ttml", "texttracks"],
+  "keywords": [
+    "videojs",
+    "videojs-plugin",
+    "ttml",
+    "texttracks"
+  ],
   "author": "SRGSSR",
   "license": "MIT",
   "dependencies": {
-    "video.js": "^5.8.5",
+    "video.js": "^7.2.4",
     "moment": "^2.17.0"
   },
   "devDependencies": {

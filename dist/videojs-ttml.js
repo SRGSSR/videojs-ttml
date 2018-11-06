@@ -1,4 +1,4 @@
-/*! videojs-ttml - v0.2.2 - 2017-03-28*/
+/*! videojs-ttml - v0.2.2 - 2018-11-06*/
 (function(window, moment, vjs) {
   'use strict';
 
@@ -42,7 +42,7 @@
     }
   };
 
-  vjs.plugin('ttml', function(options) {
+  vjs.registerPlugin('ttml', function(options) {
       var constructor = this,
           Player = {
             addRemoteTextTrack: constructor.addRemoteTextTrack
