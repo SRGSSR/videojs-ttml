@@ -1,4 +1,4 @@
-/*! videojs-ttml - v0.2.2 - 2018-11-06*/
+/*! videojs-ttml - v0.2.2 - 2019-08-06*/
 (function(window, moment, vjs) {
   'use strict';
 
@@ -51,7 +51,7 @@
       this.addRemoteTextTrack = function(options, manualCleanup) {
         var parser = new TTMLParser(),
             src = options.src,
-            isTTML = options.type && options.type === 'application/ttml+xml',
+            isTTML = options.type && options.type === 'application/ttml+xml' || options.mimeType && options.mimeType === 'application/ttml+xml',
             elmt;
 
         options.src = (isTTML) ? undefined : options.src;
